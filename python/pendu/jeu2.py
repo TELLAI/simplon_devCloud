@@ -1,15 +1,12 @@
 import random
 
-import random
-
-# variable globale:
 # fonction récupere le mot
-
 def fct_recup():
     with open("mots.txt", "r") as fichier:
         list_w = fichier.read().split()
     word_l = random.sample(list_w, 1)
-    word = list(word_l[0])
+    word = word_l[0].lower()
+    word = list(word)
     print(word)
     return (word)
 
@@ -24,48 +21,61 @@ def fct_create(word):
 # variable global
 new_word = fct_create(word)
 
-# fonction comparaison du mot avec la lettre
-"""
-def fct_compare():
-    print(new_word)
-    lettre = input("veuillez entrer une lettre: ")
-    rep = False
-    res = {}
-    res[rep] = new_word
-    for ii, i in enumerate(word):
-        if i == lettre:
-            new_word[ii] = word[ii]
-            rep = True
-    return (res)
-print(fct_compare())
-
-
-#variable global:
-dict_log = {}
-dict_log = fct_compare()"""
-
 def fct_fill(new_word, lettre, index):
     new_word[index] = lettre
     return (new_word)
 
 #fonction du jeu:
-def fct_game():
-    rep = False
-    count_life = 5
-    count_word = len(word)
+def fct_game(count_life, count_word):
     while(count_word > 0 and count_life > 0):
+        rep = False
         print(new_word)
-        lettre = input("veuillez entrer une lettre: ")
-        for ii, i in enumerate(word):
-            if i == lettre:
-                fct_fill(new_word, lettre, ii)
-                count_word -= 1
-                rep = True
-                print(count_life)
-        if rep == False:
-            count_life -= 1
-            print(count_life)
-print(fct_game())
+        print("Vous avez " + str(count_life) + " vies pour y arriver !")
+        lettre = input("veuillez saisir une lettre: ")
+        if (len(lettre) == 1):
+            if (64 < ord(lettre) < 91) or (96 < ord(lettre) < 123):
+                for ii, i in enumerate(word):
+                    if i == lettre:
+                        fct_fill(new_word, lettre, ii)
+                        count_word -= 1
+                        rep = True
+                        print(count_word)
+                if rep == False:
+                    count_life -= 1
+            else:
+                print("Votre saisie est incorrect, recommencez !")
+                fct_game(count_life, count_word)
+        else:
+            print("votre saisie est incorrect, recommencez !")
+            fct_game(count_life, count_word)
+    
+    if count_word == 0 and count_life > 0:
+        print("Bravo vous avez gagné en trouvant le mot " + ("".join(word)))
+    else:
+        print("Dommage vous avez perdu")
 
-# algo principale du jeu:
+# algo niveau du jeu:
+def fct_level():
+    count_word = len(word)
+    level = input("Quel niveau voulez-vous jouer 1, 2 ou 3 ? ")
+    if len(level) == 1:
+        if 0 < int(level) < 3:
+            new_word[0] = word[0]
+            new_word[len(word) - 1] = word[len(word) - 1]
+            count_word -= 2
+            if int(level) == 1:
+                count_life = 7
+                fct_game(count_life, count_word)
+            elif int(level) == 2:
+                count_life = 5
+                fct_game(count_life, count_word)
+        elif int(level) == 3:
+            count_life = 5
+            fct_game(count_life, count_word)
+        else:
+            print("saisie incorrect recommencez !")
+    else:
+        print("saisie incorrect recommencez !")
+        fct_level()
+fct_level()
 # fonction print du pendu
