@@ -1,0 +1,126 @@
+/******************BODY****************/
+
+* {
+  box-sizing: border-box; /* On spécifie que la largeur (width) de chaque boîte comprend le padding et la bordure (par défaut, c'est seulement la largeur du contenu) */
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px (la formule est 10/16*100) la taille par défaut étant 16px */
+}
+
+body {
+  font-size: 1.6rem; /* on remets la taille du texte par défaut pour le body à 16px en utilisant les rem comme unité) */
+  background-color: #500472;
+  opacity: 0.8;
+}
+
+/******************HEADER****************/
+header {
+  background-color: #73cbb8;
+  display: flex;
+}
+.logo {
+  padding-left: 4em;
+}
+.nav {
+  padding-left: 20em;
+  padding-top: 4em;
+}
+.fa-headphones {
+  color: #500472;
+  font-size: 15em;
+}
+.nav p {
+  color: #500472;
+  font-size: 3em;
+  font-style: italic;
+}
+/********************MAIN*************/
+.play {
+  display: grid;
+  background-color: #73cbb8;
+  max-width: 30em;
+  margin: 5em auto;
+}
+.info {
+  padding: 2em 4em 2em 4em;
+}
+.info img {
+  width: 20em;
+  border-radius: 10em;
+}
+.info h2 {
+  text-align: center;
+  color: #500472;
+  font-size: 2em;
+}
+.info h3 {
+  text-align: center;
+  color: #500472;
+  font-size: 1.5em;
+}
+.lecteur {
+  padding: 0 4em 2em 4em;
+  display: flex;
+}
+.lecteur .fas {
+  color: #500472;
+  font-size: 4em;
+  margin-left: 0.4em;
+}
+.liste {
+  display: grid;
+  width: 60em;
+  margin: 0 auto 10em auto;
+  box-shadow: 10px 10px 12px #555;
+}
+.info_l {
+  display: flex;
+  padding: 1em;
+  justify-content: space-between;
+}
+.impaire {
+  background-color: #73cbb8;
+  color: #500472;
+}
+.paire {
+  color: #73cbb8;
+}
+.info_l img {
+  width: 5em;
+  border-radius: 10em;
+}
+.info_l h2 {
+  font-size: 2em;
+  /*margin-left: 1em;*/
+}
+.info_l h3 {
+  font-size: 1.4em;
+  /*margin-left: 1em;*/
+  padding-top: 0.5em;
+}
+.info_l .fab {
+  color: red;
+  font-size: 5em;
+  /*margin-left: rem;*/
+}
+.info_l:hover {
+  transform: scale(1.01);
+}
+.liste:hover {
+  transform: scale(1.01);
+}
+
+/****************FOOTER*************/
+
+footer {
+  background-color: #73cbb8;
+  display: flex;
+}
+footer q {
+  color: #500472;
+  font-size: 3em;
+  padding-left: 4em;
+  padding-top: 1.5em;
+  font-style: italic;
+}
