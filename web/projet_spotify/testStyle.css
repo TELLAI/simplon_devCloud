@@ -1,0 +1,41 @@
+/**********************General****************************/
+* {
+	box-sizing: border-box; /* On spécifie que la largeur (width) de chaque boîte comprend le padding et la bordure (par défaut, c'est seulement la largeur du contenu) */
+}
+
+html {
+	font-size: 62.5%; /* 1rem = 10px (la formule est 10/16*100) la taille par défaut étant 16px */
+}
+
+body {
+	    font-size: 1.6rem; /* on remets la taille du texte par défaut pour le body à 16px en utilisant les rem comme unité) */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+.fiche {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+button {
+        font-family: monospace;
+        font-size: 3.8em;
+        padding: 0.5em;
+        text-align: center;
+}
+.track_image {
+    width: 25em;
+    border-radius: 5em;
+}
+.title {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+.artist {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
