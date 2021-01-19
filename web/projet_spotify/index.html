@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,123 +7,34 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="testStyle.css">
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <i class="fas fa-headphones"></i>
-      </div>
-      <div class="nav">
-        <p>My playlist will make you smile !!!</p>
-      </div>
-    </header>
-    <main>
-      <div class="play">
-        <div class="info">
-          <img class ="track_image">
-          <h2 class="artist">aaa</h2>
-          <h3 class="title">aaa</h3>
+        <div class="fiche">
+          <div class="left">
+              <div class="contain_img"><img class="track_image"></div>
+              <p class="title"></p>
+              <p class="artist"></p>
+          </div>
+          <div class="right">
+              <div class="duration">
+                  <p id="track_duration">0</p>
+                  <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+              </div>
+              <div class="player">
+                  <button onclick = "backSong()" class="cl precedent"><i class="fas fa-backward"></i></button>
+                  <button onclick = "justPlay()" class="cl play"><i class="fas fa-play"></i></button>
+                  <button onclick = "nextSong()" class="cl suivant"><i class="fas fa-forward"></i></button>
+              </div>
+              <div class="volume">
+                  <p id="volume_show">90</p>
+                  <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+                  <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">  
+              </div>
+            </div>
         </div>
-        <div class="lecteur">
-          <button onclick="backSong()" class="precedent">
-            <i class="fas fa-backward butt"></i>
-          </button>
-          <button onclick="playSong()" class="play">
-            <i class="fas fa-play butt"></i>
-          </button>
-          <button onclick="pauseSong()" class="pause">
-            <i class="fas fa-pause butt"></i>
-          </button>
-          <button onclick="nextSong()" class="suivant">
-            <i class="fas fa-forward butt"></i>
-          </button>
-        </div>
-      </div>
-      <audio src="music/chacun-ses-raisons.mp3"></audio>
-      <div class="liste">
-        <div class="info_l impaire button">
-          <img src="img/NIRO.jpg" alt="" />
-          <h2>NIRO</h2>
-          <h3>Chacun ses raisons</h3>
-          <a href="https://www.youtube.com/watch?v=z0rTjoafdwE"
-            ><i class="fab fa-youtube"></i
-          ></a>
-        </div>
-        <div class="info_l paire">
-          <img src="img/john_lennon.jpg" alt="" />
-          <h2>John Lennon</h2>
-          <h3>Imagine</h3>
-          <a href="https://www.youtube.com/watch?v=VOgFZfRVaww"
-            ><i class="fab fa-youtube"></i
-          ></a>
-        </div>
-        <div class="info_l impaire">
-          <img src="img/misteryou.jpg" alt="" />
-          <h2>Mister You</h2>
-          <h3>J'commence tout doux</h3>
-          <a href="https://www.youtube.com/watch?v=FLdMX2ckk1s"
-            ><i class="fab fa-youtube"></i
-          ></a>
-        </div>
-        <div class="info_l paire">
-          <img src="img/red_hill.jpg" alt="" />
-          <h2>RED HOT CHILI PEPPERS</h2>
-          <h3>Californication</h3>
-          <a href="https://www.youtube.com/watch?v=LV34GMYLXcA"
-            ><i class="fab fa-youtube"></i
-          ></a>
-        </div>
-        <div class="info_l impaire">
-          <img src="img/eagles.jpg" alt="" />
-          <h2>EAGLES</h2>
-          <h3>Hotel California</h3>
-          <a href="https://www.youtube.com/watch?v=811QZGDysx0"
-            ><i class="fab fa-youtube"></i
-          ></a>
-        </div>
-        <div class="info_l paire">
-          <img src="img/tupac.jpg" alt="" />
-          <h2>Tupac</h2>
-          <h3>California Love</h3>
-          <a href="https://www.youtube.com/watch?v=mwgZalAFNhM"
-            ><i class="fab fa-youtube"></i
-          ></a>
-        </div>
-        <div class="info_l impaire">
-          <img src="img/jul.jpg" alt="" />
-          <h2>JUL</h2>
-          <h3>Temps d'avant</h3>
-          <a href="https://www.youtube.com/watch?v=qj2MY6UaVLk"
-            ><i class="fab fa-youtube"></i
-          ></a>
-        </div>
-        <div class="info_l paire">
-          <img src="img/Mafia-k1-fry-logo.jpg" alt="" />
-          <h2>Mafia K'1 Fry</h2>
-          <h3>Pour ceux</h3>
-          <a href="https://www.youtube.com/watch?v=QzoBB9NO9Dc"
-            ><i class="fab fa-youtube"></i
-          ></a>
-        </div>
-        <div class="info_l impaire">
-          <img src="img/rimk.jpg" alt="" />
-          <h2>RIMK</h2>
-          <h3>500€</h3>
-          <a href="https://www.youtube.com/watch?v=2Z64-pf-I_Q"
-            ><i class="fab fa-youtube"></i
-          ></a>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div class="logo">
-        <i class="fas fa-headphones"></i>
-      </div>
-      <q>Les goûts et les couleurs ne se discute pas</q>
-    </footer>
     <script src="audio.js"></script>
   </body>
 </html>
