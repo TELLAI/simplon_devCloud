@@ -3,77 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-      <div id="contain">
-          <div class="saisie">
-                <input type="text" id="name"/>
-                <button id="push">Envoyer</button>
-            </div>
-            <div class="affichage list">
-            </div>
-            <div class="saisie">
-                <input type="text" id="nb_grp"/>
-                <button id="group">Créer des groupes</button>
-            </div>
-            <div class="affichage grp">
-            </div>
-            <button id="delete">Supprimer la liste</button>
-        </div>
-    <script>
-        let listName = [];
-        let divList = document.querySelector(".list");
-        let divGrp = document.querySelector(".grp");
-        //let mylist = document.querySelector("#mylist");
-        //let myGrp = document.querySelector("#myGrp");
-        
-        let count_Grp = 1;
-
-        document.querySelector("#push").addEventListener("click", function() {
-            let myName = document.querySelector("#name").value;
-            listName.push(myName);
-            let mylist = document.createElement("div"); 
-            mylist.innerText += myName + "\n";
-            divList.appendChild(mylist);
-        })
-        function swapArray(array) {
-            for (var i = array.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
-            var temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-    }
-}
-let new_grp = [];
-        document.querySelector("#group").addEventListener("click", function(){
-            let nb_par_grp = document.querySelector("#nb_grp").value;
-            nb_par_grp = parseInt(nb_par_grp);
-            swapArray(listName);
-            let count = 0;
-            
-            while (count < listName.length ) {
-                let myGrp = document.createElement("div");
-                myGrp.innerText += "Groupe " + count_Grp + " : " + "\n";
-                for (var i = 0; i < nb_par_grp; i++) {
-                    new_grp.push(listName[count]);
-                    myGrp.innerText += new_grp[count] + "\n";
-                    divGrp.appendChild(myGrp);
-                    count++;
-                }
-                console.log(nb_par_grp);
-                count_Grp++;
-        }
-        })
-
-        document.querySelector("#delete").addEventListener("click", function() {
-            let deleteList = listName.splice(0, listName.length);
-            deletelist = new_grp.splice(0, new_grp.length);
-            divGrp.innerText = new_grp;
-            divlist.innerText = listName;
-        })
-
-    </script>
+    <div id="contain">
+      <div class="saisie">
+        <input type="text" id="name" />
+        <button id="push" onclick="create_list()">Envoyer</button>
+      </div>
+      <div class="affichage list"></div>
+      <div class="saisie">
+        <input type="number" id="nb_grp" min="1" />
+        <button id="group" onclick="nb_input()">Créer des groupes</button>
+      </div>
+      <div class="affichage grp"></div>
+      <button id="delete" onclick="app_delete()">Supprimer la liste</button>
+    </div>
+    <script src="form.js"></script>
   </body>
 </html>

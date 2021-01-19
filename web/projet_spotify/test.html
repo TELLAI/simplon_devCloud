@@ -13,19 +13,26 @@
   </head>
   <body>
         <div class="fiche">
-            <img class="track_image">
-            <p class="title"></p>
-            <p class="artist"></p>
-            <div class="player">
-                <button onclick = "backSong()" class="precedent"><i class="fas fa-backward"></i></button>
-                <button onclick = "playSong()" class="play"><i class="fas fa-play"></i></button>
-                <button onclick = "pauseSong()" class="pause"><i class="fas fa-pause"></i></button>
-                <button onclick = "nextSong()" class="suivant"><i class="fas fa-forward"></i></button>
-            </div>
-            <div class="volume">
-                <p id="volume_show">90</p>
-                <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
-                <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">  
+          <div class="left">
+              <div class="contain_img"><img class="track_image"></div>
+              <p class="title"></p>
+              <p class="artist"></p>
+          </div>
+          <div class="right">
+              <div class="duration">
+                  <p id="track_duration">0</p>
+                  <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+              </div>
+              <div class="player">
+                  <button onclick = "backSong()" class="cl precedent"><i class="fas fa-backward"></i></button>
+                  <button onclick = "justPlay()" class="cl play"><i class="fas fa-play"></i></button>
+                  <button onclick = "nextSong()" class="cl suivant"><i class="fas fa-forward"></i></button>
+              </div>
+              <div class="volume">
+                  <p id="volume_show">90</p>
+                  <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+                  <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">  
+              </div>
             </div>
         </div>
     <script src="audio.js"></script>
