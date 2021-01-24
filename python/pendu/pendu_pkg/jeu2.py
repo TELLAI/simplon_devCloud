@@ -157,22 +157,8 @@ def fct_game(count_life, count_word, pendu):
     
     if count_word == 0 and count_life > 0:
         print("Bravo vous avez gagné en trouvant le mot " + ("".join(word)))
-        fct_replay()
     else:
         print("Dommage vous avez perdu")
-        fct_replay()
-
-def fct_replay():
-    replay = input("Voulez-vous rejouer ? O/N")
-    if (replay == "O"):
-        fct_level()
-    elif (replay == "N"):
-        print("OK à bientôt !")
-    else:
-        print("votre saisie est incorrect !")
-        fct_replay()
-
-
 
 # algo niveau du jeu:
 def fct_level():

@@ -1,0 +1,7 @@
+README.md
+setup.py
+pendu_youcef.egg-info/PKG-INFO
+pendu_youcef.egg-info/SOURCES.txt
+pendu_youcef.egg-info/dependency_links.txt
+pendu_youcef.egg-info/entry_points.txt
+pendu_youcef.egg-info/top_level.txt

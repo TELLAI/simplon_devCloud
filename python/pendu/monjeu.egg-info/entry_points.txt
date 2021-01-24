@@ -1,0 +1,3 @@
+[console_scripts]
+bleu = pendu_pkg.jeu2:fct_level
+

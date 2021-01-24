@@ -1,0 +1,9 @@
+README.md
+setup.py
+monjeu.egg-info/PKG-INFO
+monjeu.egg-info/SOURCES.txt
+monjeu.egg-info/dependency_links.txt
+monjeu.egg-info/entry_points.txt
+monjeu.egg-info/top_level.txt
+pendu_pkg/__init__.py
+pendu_pkg/jeu2.py
