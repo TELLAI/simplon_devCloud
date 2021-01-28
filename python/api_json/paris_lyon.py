@@ -11,6 +11,8 @@ URL = f"https://api.sncf.com/v1/coverage/sncf/journeys?from={depart}&to={arrivee
 
 r = requests.get(URL, auth=('d402691b-69c5-48e6-b658-9f9be6140b8a',''))
 data = json.loads(r.text)
+with open('journeys.json', 'w') as file:
+    json.dump(r.text, file)
 
 print(type(data))
 list_arret = []
