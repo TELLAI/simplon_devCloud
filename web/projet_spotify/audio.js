@@ -168,3 +168,12 @@ function change_duration(){
   track.currentTime = slider_position;
   //track_duration.innerHTML = slider.value;
 }
+
+function convertElapsedTime (inputSeconds) {
+    var secondes = Math.floor (inputSeconds% 60)
+    if (secondes <10) {
+        secondes = "0" + secondes
+    }
+    var minutes = Math.floor (inputSeconds / 60)
+    return minutes + ":" + secondes
+}

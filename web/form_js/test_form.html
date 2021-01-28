@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="contain">
+      <div class="saisie">
+        <input type="text" id="name" />
+        <button id="push" onclick="create_list()">Envoyer</button>
+      </div>
+      <div class="affichage list"></div>
+      <div class="saisie">
+        <input type="number" id="nb_grp" min="1" />
+        <button id="group" onclick="nb_input()">Créer des groupes</button>
+      </div>
+      <div class="affichage grp"></div>
+      <button id="delete" onclick="app_delete()">Supprimer la liste</button>
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>
