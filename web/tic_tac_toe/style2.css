@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+background-color: #70b9be;
+text-align: center;
+}
+
+#div_title{
+
+  margin: 1.3em 0;
+  color: #fff;
+  margin: 2em 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+}
+
+p{
+  margin: 1em;
+}
+
+.player{
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.2em 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+}
+
+.btn {
+  color: #69a9ad;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1.3em 4em;
+  margin: 2em 0;
+  border: 1px #488286;
+  border-radius: .8em;
+  box-shadow: -5px -5px 20px #488286,  5px 5px 20px #BABECC;
+}
+
+.btn:hover, .carre:hover {
+
+  opacity: .8;
+  box-shadow: -2px -2px 5px #488286, 2px 2px 5px #BABECC;
+}
+
+.container{
+
+  display: none;
+  grid-template-columns: repeat(3, auto);
+  margin:0 auto;
+  max-width: 700px;
+  
+}
+
+
+.carre_1, .carre_2 {
+
+width: 200px;
+height: 200px;
+background-color: #69a9ad;
+border: 1px solid #488286;
+margin:0.1em auto;
+border-radius: .2em;
+box-shadow: -5px -5px 20px #488286,  5px 5px 20px #BABECC;
+color: #fff;
+font-size: 10rem;
+}
+
+.carreplayer{
+  width: 300px;
+  height: 200px;
+  background-color: #70b9be;
+  margin: .5em auto;
+  text-shadow: -5px -5px 20px #488286,  5px 5px 20px #BABECC;
+  color:#69a9ad;
+  font-size: 8rem;
+  margin: auto;
+
+}

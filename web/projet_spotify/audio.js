@@ -9,7 +9,12 @@ let recent_volume = document.querySelector("#volume");
 let show_duration = document.querySelector("#show_duration");
 let slider = document.querySelector("#duration_slider");
 let track_duration = document.querySelector("#track_duration");
+var seekSlider = document.getElementById("#duration_slider");
+let currentTimeContainer = document.getElementById("#current-time");
+let totalTimeContainer = document.getElementById("#total-time");
+
 let track = document.createElement("audio");
+track.setAttribute("id", "myAudio");
 
 let num_index = 0;
 let playing_song = false;
@@ -106,12 +111,11 @@ function player(num_index) {
 player(num_index);
 
 function justPlay() {
-    if (playing_song == false){
-        playSong();
-    }
-    else{
-        pauseSong();
-    }
+  if (playing_song == false) {
+    playSong();
+  } else {
+    pauseSong();
+  }
 }
 
 function playSong() {
@@ -131,49 +135,55 @@ function nextSong() {
     num_index += 1;
     player(num_index);
     playSong();
-  }
-  else{
-      num_index = 0;
-      player(num_index);
-      playSong();
+  } else {
+    num_index = 0;
+    player(num_index);
+    playSong();
   }
 }
 
 function backSong() {
-    if (num_index > 0) {
-        num_index -= 1;
-        player(num_index);
-        playSong();
-    }
-    else{
-        num_index = all_song.length - 1;
-        player(num_index);
-        playSong();
-    }
+  if (num_index > 0) {
+    num_index -= 1;
+    player(num_index);
+    playSong();
+  } else {
+    num_index = all_song.length - 1;
+    player(num_index);
+    playSong();
+  }
 }
-function mute_sound(){
+function mute_sound() {
   track.volume = 0;
   volume.value = 0;
   volume_show.innerHTML = 0;
 }
-function volume_change(){
+function volume_change() {
   volume_show.innerHTML = recent_volume.value;
   track.volume = recent_volume.value / 100;
 }
-function reset_slider(){
+function reset_slider() {
   slider.value = 0;
 }
-function change_duration(){
-  slider_position = track.duration * (slider.value / 100);
-  track.currentTime = slider_position;
-  //track_duration.innerHTML = slider.value;
+
+function convertElapsedTime(inputSeconds) {
+  var secondes = Math.floor(inputSeconds % 60);
+  if (secondes < 10) {
+    secondes = "0" + secondes;
+  }
+  var minutes = Math.floor(inputSeconds / 60);
+  return minutes + ":" + secondes;
 }
 
-function convertElapsedTime (inputSeconds) {
-    var secondes = Math.floor (inputSeconds% 60)
-    if (secondes <10) {
-        secondes = "0" + secondes
-    }
-    var minutes = Math.floor (inputSeconds / 60)
-    return minutes + ":" + secondes
-}
+myAudio.addEventListener("loadedmetadata", function () {
+  totalTimeContainer.innerHTML = convertElapsedTime(track.duration);
+  currentTimeContainer.innerHTML = convertElapsedTime(track.currentTime);
+  seekSlider.max = track.duration;
+  seekSlider.setAttribute("value", track.currentTime);
+});
+
+myAudio.addEventListener("timeupdate", function () {
+  currentTimeContainer.innerHTML = convertElapsedTime(track.currentTime);
+  seekSlider.setAttribute("value", track.currentTime);
+  seekSlider.value = track.currentTime;
+});

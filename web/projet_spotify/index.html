@@ -19,9 +19,10 @@
               <p class="artist"></p>
           </div>
           <div class="right">
-              <div class="duration">
-                  <p id="track_duration">0</p>
-                  <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+              <div id="duration">
+                  <input type="range" min="0" value="" id="duration_slider" step = "1">
+                  <div id="current-time"></div>
+                  <div id="total-time"></div>
               </div>
               <div class="player">
                   <button onclick = "backSong()" class="cl precedent"><i class="fas fa-backward"></i></button>
