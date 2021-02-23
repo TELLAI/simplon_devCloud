@@ -1,0 +1,144 @@
+2021-02-18 21:31:49,074 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-02-18 21:31:49,084 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 21:31:50,198 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 301 None
+2021-02-18 21:31:52,356 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs/ HTTP/1.1" 200 None
+2021-02-18 21:31:52,589 : INFO : create_tables conn success
+2021-02-18 21:31:52,594 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 21:31:52,655 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 21:31:52,824 : WARNING : Failure insert_tables conn
+2021-02-18 21:31:52,829 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 21:31:52,914 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 21:31:53,054 : INFO : select_from_db conn success
+2021-02-18 21:34:46,135 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-02-18 21:34:46,144 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 21:34:46,243 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 21:34:46,512 : INFO : create_tables conn success
+2021-02-18 21:34:46,517 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 21:34:46,599 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 21:34:46,764 : WARNING : Failure insert_tables conn
+2021-02-18 21:34:46,768 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 21:34:46,840 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 21:34:46,976 : INFO : select_from_db conn success
+2021-02-18 21:36:19,931 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-02-18 21:36:19,940 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 21:36:20,044 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 21:36:20,296 : INFO : create_tables conn success
+2021-02-18 21:36:20,304 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 21:36:20,377 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 21:36:20,552 : WARNING : Failure insert_tables conn
+2021-02-18 21:36:20,557 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 21:36:20,615 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 21:36:20,765 : WARNING : Failure select_from_db conn
+2021-02-18 21:48:48,671 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-02-18 21:48:48,678 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 21:48:48,788 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 21:48:49,032 : INFO : create_tables conn success
+2021-02-18 21:48:49,036 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 21:48:49,102 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 21:48:49,274 : WARNING : Failure insert_tables conn
+2021-02-18 21:48:49,278 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 21:48:49,356 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 21:48:49,503 : WARNING : Failure select_from_db conn
+2021-02-18 22:49:57,354 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-02-18 22:49:57,360 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 22:49:57,439 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 22:49:57,689 : INFO : create_tables conn success
+2021-02-18 22:49:57,693 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 22:49:57,769 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 22:49:57,912 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 22:49:57,986 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 22:49:58,156 : WARNING : Failure insert_tables conn
+2021-02-18 22:52:38,121 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-02-18 22:52:38,244 : INFO : create_tables conn success
+2021-02-18 22:52:38,249 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 22:52:38,329 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 22:52:38,497 : WARNING : Failure insert_tables conn
+2021-02-18 22:54:31,152 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-02-18 22:54:31,289 : INFO : create_tables conn success
+2021-02-18 22:54:31,295 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 22:54:31,374 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 22:54:31,543 : WARNING : Failure insert_tables conn
+2021-02-18 22:55:21,987 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-02-18 22:55:22,132 : INFO : create_tables conn success
+2021-02-18 22:55:22,134 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 22:55:22,193 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 22:55:22,364 : WARNING : Failure insert_tables conn
+2021-02-18 22:55:58,996 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-02-18 22:55:59,153 : INFO : create_tables conn success
+2021-02-18 22:55:59,155 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 22:55:59,246 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 22:55:59,421 : WARNING : Failure insert_tables conn
+2021-02-18 22:59:20,140 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-02-18 22:59:20,238 : INFO : create_tables conn success
+2021-02-18 22:59:20,240 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 22:59:20,300 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 22:59:20,468 : WARNING : Failure insert_tables conn
+2021-02-18 23:00:22,288 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-02-18 23:00:22,413 : INFO : create_tables conn success
+2021-02-18 23:00:22,414 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 23:00:22,485 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 23:00:22,658 : WARNING : Failure insert_tables conn
+2021-02-18 23:08:37,686 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-02-18 23:08:37,806 : INFO : create_tables conn success
+2021-02-18 23:08:37,808 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 23:08:37,881 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 23:08:38,046 : WARNING : Failure insert_tables conn
+2021-02-18 23:11:58,933 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-02-18 23:11:58,941 : INFO : create_tables conn success
+2021-02-18 23:11:58,943 : DEBUG : Starting new HTTPS connection (1): www.vintagerides.com:443
+2021-02-18 23:11:59,000 : DEBUG : https://www.vintagerides.com:443 "GET /calendrier-des-departs HTTP/1.1" 200 None
+2021-02-18 23:11:59,176 : WARNING : Failure insert_tables conn
+2021-02-18 23:14:19,867 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-02-18 23:14:19,886 : INFO : create_tables conn success
+2021-02-18 23:19:56,735 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-02-18 23:19:56,744 : INFO : create_tables conn success
+2021-02-18 23:21:47,981 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-02-18 23:21:47,995 : INFO : create_tables conn success
