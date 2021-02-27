@@ -6,7 +6,7 @@ import datetime
 class Scrap_info:
     def __init__(self):
         self.matchs = []
-        self.url = 'https://www.footao.tv/programmefoot.php?mois=f%C3%A9vrier&ms=02&an=2021'
+        self.url = 'https://www.footao.tv/programmefoot.php?mois=mars&ms=03&an=2021'
         self.response = requests.get(self.url)
         self.content = BeautifulSoup(self.response.content, 'html.parser')
         

@@ -1,5 +1,5 @@
 import logging
-from t import Scrap_info
+from api_scrap import Scrap_info
 from mysql_api import Mydb_scrap
 
 logging.basicConfig(level=logging.DEBUG,

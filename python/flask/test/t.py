@@ -108,8 +108,9 @@ class Scrap_info:
                     self.list_time.append(time_s[0].get_text())
 
     def finder(self):
-        for i in self.list_content:
-            element = i.select('article>section')
+        count = 0
+        while count < 5:
+            element = self.list_content[count].select('article>section')
             for ii, i in enumerate(element):
                 dates = element[ii]['id']
                 if dates=="pjr":
@@ -131,16 +132,17 @@ class Scrap_info:
                 date_s = element[ii].select("h2>a")
                 date_text = date_s[0].get_text()
                 divs = element[ii].select("div")
-                for yy, y in enumerate(divs):
-                    time_s = divs[yy].select('time')
+                count1 = 0
+                while count1 < len(divs):
+                    time_s = divs[count1].select('time')
                     time = time_s[0].get_text()
-                    chaine_s = divs[yy].select('a')
+                    chaine_s = divs[count1].select('a')
                     chaine_o = list(chaine_s[0].find('img')['alt'])
                     if 'm' in chaine_o:
                         chaine = ''.join(chaine_o[:chaine_o.index('m') - 1])
                     else:
                         chaine = "???"
-                    match_s = divs[yy].select("a[class=rc]")
+                    match_s = divs[count1].select("a[class=rc]")
                     match = match_s[0].get_text()
                     match_l = list(match)
                     if '·' in match_l:
@@ -149,7 +151,7 @@ class Scrap_info:
                     else:
                         eq1 = match
                         eq2 = match
-                    compet_s = divs[yy].select("span[class=ap]")
+                    compet_s = divs[count1].select("span[class=ap]")
                     if len(compet_s) > 0:
                         compet = compet_s[0].get_text()
                         if compet == "\xa0 \xa0»\xa0":
@@ -159,9 +161,11 @@ class Scrap_info:
                         compet = "match finie"
                         dict_match = {"Nom":match, "Date_text":date_text, "Time":time, "Equipe1":eq1, "Equipe2":eq2, "Competition":compet, "Chaine":chaine, "Date_num": date_num}
                     self.matchs.append(dict_match)
+                    count1 = count1 + 1
+            count = count + 1
 
 test = Scrap_info()
 test.get_response()
 test.get_content()
-test.get_name()
-print(len(test.list_name))
+test.finder()
+print(len(test.matchs))

@@ -13,7 +13,8 @@ mysql = MySQL(app)
 
 # @app.route('/')
 # def index():
-#     return render_template('index.html')
+#     return render_template('index.html')4
+
 @app.route('/Equipe')
 def Team():
     eq1 = request.args.get("equipe")

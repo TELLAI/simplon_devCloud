@@ -185,3 +185,12 @@
 2021-02-21 19:45:07,093 : DEBUG : Starting new HTTPS connection (1): www.footao.tv:443
 2021-02-21 19:45:07,389 : DEBUG : https://www.footao.tv:443 "GET /programmefoot.php?mois=juin&ms=06&an=2021 HTTP/1.1" 200 20206
 2021-02-21 19:45:07,775 : INFO : Insert information in table of db not possible
+2021-02-27 16:14:17,807 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-02-27 16:14:17,813 : INFO : Creation of instance of class Mydb_scrap
+2021-02-27 16:14:17,818 : INFO : Creation of table in db
+2021-02-27 16:14:17,820 : DEBUG : Starting new HTTPS connection (1): www.footao.tv:443
+2021-02-27 16:14:17,882 : DEBUG : https://www.footao.tv:443 "GET /programmefoot.php?mois=mars&ms=03&an=2021 HTTP/1.1" 200 29475
+2021-02-27 16:14:21,580 : INFO : Insert information in table of db
