@@ -1,4 +1,4 @@
-# SCRAPPER-FOOT
+# todo-frontend
 
 Ce dépôt contient le _frontend_ et le _backend_ de l'application scrapper_foot qui permet de récuperer des informations sur la programmation des matchs de foot à venir.
 
