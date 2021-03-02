@@ -1,0 +1,15 @@
+2021-03-02 22:33:11,293 : INFO : 
+
+-------------------init __main__.py------------------------ 
+
+2021-03-02 22:33:11,311 : INFO : Creation of instance of class Mydb_scrap
+2021-03-02 22:33:11,316 : INFO : Creation of table in db
+2021-03-02 22:33:11,319 : DEBUG : Starting new HTTPS connection (1): www.footao.tv:443
+2021-03-02 22:33:11,847 : DEBUG : https://www.footao.tv:443 "GET /programmefoot.php?mois=mars&ms=03&an=2021 HTTP/1.1" 200 32122
+2021-03-02 22:33:15,914 : INFO : Insert information in table of db
+2021-03-02 22:42:19,784 : INFO :  * Running on http://0.0.0.0:5200/ (Press CTRL+C to quit)
+2021-03-02 22:42:19,784 : INFO :  * Restarting with stat
+2021-03-02 22:42:20,256 : WARNING :  * Debugger is active!
+2021-03-02 22:42:20,256 : INFO :  * Debugger PIN: 176-445-683
+2021-03-02 22:42:38,902 : INFO : 127.0.0.1 - - [02/Mar/2021 22:42:38] "[37mGET /home HTTP/1.1[0m" 200 -
+2021-03-02 22:42:38,930 : INFO : 127.0.0.1 - - [02/Mar/2021 22:42:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
